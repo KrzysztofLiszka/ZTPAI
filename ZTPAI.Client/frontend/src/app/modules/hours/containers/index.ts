@@ -1,0 +1,1 @@
+export * from './hours-page/hours-page.component';
