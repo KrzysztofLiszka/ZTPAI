@@ -1,0 +1,1 @@
+export * from './workers-page/workers-page.component';
