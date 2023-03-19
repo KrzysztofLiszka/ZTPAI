@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using ZTPAI.API.Models;
 
 namespace ZTPAI.API.Controllers
 {
