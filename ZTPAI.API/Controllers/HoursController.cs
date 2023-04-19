@@ -7,7 +7,7 @@ namespace ZTPAI.API.Controllers
     [ApiController]
     public class HoursController : ControllerBase
     {
-        [HttpGet(Name = "GetAllHours")]
+        [HttpGet("GetAllHours")]
         public IActionResult GetAllHours()
         {
             return Ok("GetAllHours - NOT IMPLEMENTED");

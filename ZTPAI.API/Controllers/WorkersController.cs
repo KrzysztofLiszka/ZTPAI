@@ -7,7 +7,7 @@ namespace ZTPAI.API.Controllers
     [ApiController]
     public class WorkersController : ControllerBase
     {
-        [HttpGet(Name = "GetAllWorkers")]
+        [HttpGet("GetAllWorkers")]
         public IActionResult GetAllWorkers()
         {
             return Ok("GetAllWorkers - NOT IMPLEMENTED");

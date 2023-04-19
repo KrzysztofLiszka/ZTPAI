@@ -7,7 +7,7 @@ namespace ZTPAI.API.Controllers
     [ApiController]
     public class TasksController : ControllerBase
     {
-        [HttpGet(Name = "GetAllTasks")]
+        [HttpGet("GetAllTasks")]
         public IActionResult GetAllTasks()
         {
             return Ok("GetAllTasks - NOT IMPLEMENTED");
