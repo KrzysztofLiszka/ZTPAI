@@ -1,4 +1,4 @@
-namespace ZTPAI.API
+namespace ZTPAI.API.Models
 {
     public class WeatherForecast
     {
