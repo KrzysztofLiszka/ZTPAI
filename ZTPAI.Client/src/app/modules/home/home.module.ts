@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './containers';
 
-const components = [HomePageComponent];
+const COMPONENTS = [HomePageComponent];
 
 @NgModule({
-  declarations: [components],
+  declarations: [COMPONENTS],
   imports: [
     CommonModule
   ],
-  exports: [components]
+  exports: [COMPONENTS]
 })
 export class HomePageModule { }

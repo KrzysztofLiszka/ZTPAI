@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomePageModule } from './modules/home/home.module';
+import { WorkersModule } from './modules/workers/workers.module';
+import { TasksModule } from './modules/tasks/tasks.module';
+import { HoursModule } from './modules/hours/hours.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +14,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomePageModule,
+    WorkersModule,
+    TasksModule,
+    HoursModule
   ],
   providers: [],
   bootstrap: [AppComponent]
