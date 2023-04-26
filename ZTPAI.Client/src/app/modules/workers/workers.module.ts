@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WorkersPageComponent } from './containers';
 
-const components = [WorkersPageComponent];
+const COMPONENTS = [WorkersPageComponent];
 
 @NgModule({
-  declarations: [components],
+  declarations: [COMPONENTS],
   imports: [
     CommonModule
   ],
-  exports: [components]
+  exports: [COMPONENTS]
 })
 export class WorkersModule { }
