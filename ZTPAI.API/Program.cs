@@ -1,9 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using ZTPAI.API.Data;
+using ZTPAI.API.Extenstions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddCustomServices(builder.Configuration.GetConnectionString("DefaultConnection"));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
