@@ -13,7 +13,7 @@ namespace ZTPAI.API.Models
         public double MinutesTaken { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public DateTime DateAdded { get; set; }
+        public DateTime? DateAdded { get; set; }
         public int Priority { get; set; }
     }
 }
