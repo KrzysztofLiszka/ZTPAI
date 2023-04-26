@@ -1,19 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using ZTPAI.API.Data;
-using ZTPAI.API.Models;
-using ZTPAI.API.Services;
-using ZTPAI.API.Services.Interfaces;
-using ZTPAI.API.SqlRepository;
+using ZTPAI.API.Extenstions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-
-builder.Services.AddScoped(typeof(ISqlRepository<>), typeof(SqlRepository<>));
-builder.Services.AddTransient<IWorkersService, WorkersService>();
-builder.Services.AddTransient<IHoursService, HoursService>();
-builder.Services.AddTransient<ITaskToDoService, TaskToDoService>();
+builder.Services.AddCustomServices(builder.Configuration.GetConnectionString("DefaultConnection"));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

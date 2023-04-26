@@ -40,7 +40,7 @@ namespace ZTPAI.API.Controllers
         {
             await _tasksToDoService.AddTaskToDoAsync(taskToDo);
 
-            return Ok("Added new hour");
+            return Ok("Added new task");
         }
 
         [HttpPut("PutTaskToDo")]
@@ -48,7 +48,7 @@ namespace ZTPAI.API.Controllers
         {
             await _tasksToDoService.UpdateTaskToDoAsync(taskToDo);
 
-            return Ok("Updated hour");
+            return Ok("Updated task");
         }
 
         [HttpDelete("DeleteTaskToDo/{id}")]
@@ -56,7 +56,7 @@ namespace ZTPAI.API.Controllers
         {
             await _tasksToDoService.DeleteTaskToDoAsync(id);
 
-            return Ok("Deleted hour");
+            return Ok("Deleted task");
         }
     }
 }
