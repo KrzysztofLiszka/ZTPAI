@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ZTPAI.API.Models;
 using ZTPAI.API.Services.Interfaces;
@@ -7,6 +7,7 @@ namespace ZTPAI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class HoursController : ControllerBase
     {
         private readonly IHoursService _hoursService;
