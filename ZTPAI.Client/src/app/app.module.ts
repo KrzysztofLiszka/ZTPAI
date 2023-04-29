@@ -7,6 +7,7 @@ import { HomePageModule } from './modules/home/home.module';
 import { WorkersModule } from './modules/workers/workers.module';
 import { TasksModule } from './modules/tasks/tasks.module';
 import { HoursModule } from './modules/hours/hours.module';
+import { LoginModule } from './modules/login/login.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HoursModule } from './modules/hours/hours.module';
     HomePageModule,
     WorkersModule,
     TasksModule,
-    HoursModule
+    HoursModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
