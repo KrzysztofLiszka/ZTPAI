@@ -3,14 +3,14 @@
     <img src="../../../../../assets/logo-ztpai-black.png">
   </div>
   <div class="right-side">
-    <form class="login-form">
+    <form class="login-form" [formGroup]="form">
       <p>Log in to access the system</p>
       <p>Login</p>
-      <input>
+      <input formControlName="login">
       <p>Password</p>
-      <input type="password">
+      <input formControlName="password" type="password">
       <br />
-      <button>SUBMIT</button>
+      <button (click)="login()">SUBMIT</button>
     </form>
   </div>
 </div>
