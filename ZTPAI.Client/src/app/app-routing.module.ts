@@ -7,11 +7,11 @@ import { WorkersPageComponent } from './modules/workers/containers';
 import { LoginPageComponent } from './modules/login/containers';
 
 const routes: Routes = [
-  {path: '', component: HomePageComponent},
-  {path: 'hours', component: HoursPageComponent},
-  {path: 'tasks', component: TasksPageComponent},
-  {path: 'workers', component: WorkersPageComponent},
-  {path: 'login', component: LoginPageComponent}
+  { path: '', component: HomePageComponent },
+  { path: 'hours', component: HoursPageComponent },
+  { path: 'tasks', component: TasksPageComponent },
+  { path: 'workers', component: WorkersPageComponent },
+  { path: 'login', component: LoginPageComponent }
 ];
 
 @NgModule({

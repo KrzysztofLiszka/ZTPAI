@@ -1,5 +1,4 @@
-﻿using System.IdentityModel.Tokens.Jwt;
-using ZTPAI.API.DTOs;
+﻿using ZTPAI.API.DTOs;
 using ZTPAI.API.Models;
 
 namespace ZTPAI.API.Services.Interfaces
