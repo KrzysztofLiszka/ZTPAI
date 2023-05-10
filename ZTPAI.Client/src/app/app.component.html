@@ -1,9 +1,14 @@
-<div class="menu">
+<div class="menu" *ngIf="isLoggedIn">
   <div class="button-wrapper">
-    <button [routerLink]="''">Home</button>
-    <button [routerLink]="'/workers'">Workers</button>
-    <button [routerLink]="'/tasks'">Tasks</button>
-    <button [routerLink]="'/hours'">Hours</button>
+    <div class="left-side">
+      <img src="../assets/logo-ztpai.png" [routerLink]="''">
+    </div>
+    <div class="right-side">
+      <button [routerLink]="'/workers'">Workers</button>
+      <button [routerLink]="'/tasks'">Tasks</button>
+      <button [routerLink]="'/hours'">Hours</button>
+      <button [routerLink]="'/login'" (click)="logout()">Wyloguj</button>
+    </div>
   </div>
 </div>
 <div class="content">

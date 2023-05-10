@@ -24,17 +24,18 @@ namespace ZTPAI.API.Controllers
         public async Task<ActionResult> Login(LoginDto loginDto)
         {
             var user = await _authService.AuthenticateUser(loginDto);
-            if(user == null) return Unauthorized("Wrong login or password!");
+            if (user == null) return Unauthorized("Wrong login or password!");
             var jwtToken = _authService.GenerateJtwToken(user);
 
-            return Ok(jwtToken);
+            return Ok(new { token = jwtToken });
         }
+
 
         [HttpPost("Register")]
         public async Task<ActionResult> Register(User user)
         {
             await _authService.RegisterUser(user);
-            return Ok("User registered!");
+            return Ok(new {message = "User registered"});
         }
 
         [Authorize]

@@ -1,0 +1,21 @@
+<div class="main-container">
+    <div class="left-side">
+      <img src="../../../../../assets/logo-ztpai-black.png">
+    </div>
+    <div class="right-side">
+      <form class="register-form" [formGroup]="form">
+        <p>Register to the system</p>
+        <p>Name</p>
+        <input formControlName="name">
+        <p>Surname</p>
+        <input formControlName="surname">
+        <p>Login</p>
+        <input formControlName="login">
+        <p>Password</p>
+        <input formControlName="password" type="password">
+        <br />
+        <button (click)="register()">SUBMIT</button>
+      </form>
+    </div>
+  </div>
+  

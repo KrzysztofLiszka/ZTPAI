@@ -1,0 +1,16 @@
+<div class="main-container">
+  <div class="left-side">
+    <img src="../../../../../assets/logo-ztpai-black.png">
+  </div>
+  <div class="right-side">
+    <form class="login-form" [formGroup]="form">
+      <p>Log in to access the system</p>
+      <p>Login</p>
+      <input formControlName="login">
+      <p>Password</p>
+      <input formControlName="password" type="password">
+      <br />
+      <button (click)="login()">SUBMIT</button>
+    </form>
+  </div>
+</div>
