@@ -6,10 +6,9 @@ import { HomePageModule } from './modules/home/home.module';
 import { WorkersModule } from './modules/workers/workers.module';
 import { TasksModule } from './modules/tasks/tasks.module';
 import { HoursModule } from './modules/hours/hours.module';
-import { LoginModule } from './modules/login/login.module';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TokenInterceptor } from './interceptors/token.interceptor';
+import { AuthModule } from './modules/auth/auth.module';
 
 
 @NgModule({
@@ -24,7 +23,7 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
     WorkersModule,
     TasksModule,
     HoursModule,
-    LoginModule,
+    AuthModule,
     HttpClientModule,
   ],
   providers: [],

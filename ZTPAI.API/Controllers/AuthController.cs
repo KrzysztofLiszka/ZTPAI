@@ -35,7 +35,7 @@ namespace ZTPAI.API.Controllers
         public async Task<ActionResult> Register(User user)
         {
             await _authService.RegisterUser(user);
-            return Ok("User registered!");
+            return Ok(new {message = "User registered"});
         }
 
         [Authorize]
