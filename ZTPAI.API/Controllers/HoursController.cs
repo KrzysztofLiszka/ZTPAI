@@ -37,7 +37,7 @@ namespace ZTPAI.API.Controllers
         }
 
         [HttpPost("PostHour")]
-        public async Task<ActionResult<Worker>> PostHour(Hour hour)
+        public async Task<ActionResult<Hour>> PostHour(Hour hour)
         {
             await _hoursService.AddHourAsync(hour);
 
