@@ -31,7 +31,7 @@ namespace ZTPAI.API.Extenstions
             services.AddScoped(typeof(ISqlRepository<>), typeof(SqlRepository<>));
             services.AddTransient<IWorkersService, WorkersService>();
             services.AddTransient<IHoursService, HoursService>();
-            services.AddTransient<ITaskToDoService, TaskToDoService>();
+            services.AddTransient<IAssignmentsService, AssignmentsService>();
             services.AddTransient<IAuthService, AuthService>();
 
             services.AddDbContext<DataContext>(options =>

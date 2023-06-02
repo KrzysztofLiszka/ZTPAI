@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ZTPAI.API.Models
 {
-    public class TaskToDo
+    public class Assignment
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

@@ -10,7 +10,7 @@ namespace ZTPAI.API.Data
             
         }
         public DbSet<Hour> Hours { get; set; } = null!;
-        public DbSet<TaskToDo> Tasks { get; set; } = null!;
+        public DbSet<Assignment> Tasks { get; set; } = null!;
         public DbSet<Worker> Workers { get; set; } = null!;
         public DbSet<User> Users { get; set; } = null!;
     }

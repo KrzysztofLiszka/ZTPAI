@@ -15,6 +15,7 @@ namespace ZTPAI.API.Services
 
         public async Task AddHourAsync(Hour hour)
         {
+            hour.DateAdded = DateTime.Now;
             await _hourRepository.AddAsync(hour);
         }
 
