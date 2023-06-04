@@ -7,23 +7,22 @@
   table {
     border-collapse: collapse;
     width: 100%;
-    border: 1px solid #ddd;
   }
   
   th {
     padding: 8px;
     text-align: left;
     color: rgb(241, 237, 237);
-    border-bottom: 1px solid #ddd;
   }
   
   td {
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    background-color: rgb(241, 241, 241);
   }
   
   tr:first-child th {
+    border: none;
     background-color: rgb(48, 47, 47);
   }
   

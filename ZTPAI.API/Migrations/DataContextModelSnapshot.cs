@@ -48,7 +48,6 @@ namespace ZTPAI.API.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("DateAdded")
-                        .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime2");
 
                     b.Property<Guid>("IdTask")

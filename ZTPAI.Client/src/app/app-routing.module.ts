@@ -7,7 +7,7 @@ import { LoginPageComponent, RegisterPageComponent } from './modules/auth/contai
 import { AssignmentsPageComponent } from './modules/assignments/containers';
 
 const routes: Routes = [
-    { path: '', component: HomePageComponent },
+    { path: '', component: HoursPageComponent },
     { path: 'hours', component: HoursPageComponent },
     { path: 'assignments', component: AssignmentsPageComponent },
     { path: 'workers', component: WorkersPageComponent },

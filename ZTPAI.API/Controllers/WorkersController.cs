@@ -41,7 +41,7 @@ namespace ZTPAI.API.Controllers
         {
             await _workersService.AddWorkerAsync(worker);
 
-            return Ok("Added new worker");
+            return Ok();
         }
 
         [HttpPut("PutWorker")]
@@ -49,7 +49,7 @@ namespace ZTPAI.API.Controllers
         {
             await _workersService.UpdateWorkerAsync(worker);
 
-            return Ok("Updated worker");
+            return Ok();
         }
 
         [HttpDelete("DeleteWorker/{id}")]
@@ -57,7 +57,7 @@ namespace ZTPAI.API.Controllers
         {
             await _workersService.DeleteWorkerAsync(id);
 
-            return Ok("Deleted worker");
+            return Ok();
         }
     }
 }

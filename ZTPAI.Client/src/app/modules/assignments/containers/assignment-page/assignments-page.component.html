@@ -1,3 +1,3 @@
 <app-table [dataSource]="items" [displayedColumns]="displayedColumns" [displayedHeaders]="displayedHeaders"
-  (editClicked)="null" (deleteClicked)="null" (addClicked)="null">
+  (editClicked)="editItem($event)" (deleteClicked)="deleteItem($event)" (addClicked)="addItem()">
 </app-table>

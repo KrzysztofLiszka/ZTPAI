@@ -1,10 +1,7 @@
 .menu {
   width: 100vw;
   height: 120px;
-  background-color: rgb(54, 170, 236);
-  -webkit-box-shadow: -3px 6px 22px -9px rgba(58, 72, 228, 1);
-  -moz-box-shadow: -3px 6px 22px -9px rgba(58, 72, 228, 1);
-  box-shadow: -3px 6px 22px -9px rgba(58, 72, 228, 1);
+  background-color: rgb(56, 70, 78);
 }
 
 .right-side {
@@ -14,7 +11,7 @@
   margin-left: auto;
 
   button {
-    margin-right: 35px;
+    margin-right: 1vw;
   }
 }
 
@@ -31,16 +28,16 @@ button {
   cursor: pointer;
   color: #ffffff;
   font-family: Arial;
-  font-size: 20px;
-  height: 40px;
-  width: 200px;
+  font-size: 1.8vw;
+  height: 50%;
+  width: 15vw;
   text-decoration: none;
   text-shadow: 0px 1px 0px #263666;
 
   &:hover {
     transform: scale(1.05);
-    background-color: rgb(192, 206, 221);
-    color: black;
+    background-color: rgb(126, 128, 129);
+    color: #ffffff;
   }
 }
 

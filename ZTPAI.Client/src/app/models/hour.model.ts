@@ -3,6 +3,8 @@ export interface Hour{
     idTask: string,
     idWorker: string,
     minutesTaken: number,
-    dateAdded: Date,
-    priority: number
+    dateAdded?: Date,
+    priority: number,
+    taskName?: string,
+    workerName?: string
 }

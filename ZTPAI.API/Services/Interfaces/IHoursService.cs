@@ -1,10 +1,11 @@
-﻿using ZTPAI.API.Models;
+﻿using ZTPAI.API.DTOs;
+using ZTPAI.API.Models;
 
 namespace ZTPAI.API.Services.Interfaces
 {
     public interface IHoursService
     {
-        Task<IEnumerable<Hour>> GetAllHoursAsync();
+        Task<IEnumerable<GetAllHoursDto>> GetAllHoursAsync();
         Task<Hour> GetHourByIdAsync(Guid id);
         Task AddHourAsync(Hour hour);
         Task UpdateHourAsync(Hour hour);

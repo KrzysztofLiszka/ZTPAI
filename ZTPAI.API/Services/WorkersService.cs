@@ -7,10 +7,12 @@ namespace ZTPAI.API.Services
     public class WorkersService : IWorkersService
     {
         private readonly ISqlRepository<Worker> _workerRepository;
+        private readonly ISqlRepository<Hour> _hourRepository;
 
-        public WorkersService(ISqlRepository<Worker> workerRepository)
+        public WorkersService(ISqlRepository<Worker> workerRepository, ISqlRepository<Hour> hourRepository)
         {
             _workerRepository = workerRepository;
+            _hourRepository = hourRepository;
         }
 
         public async Task<IEnumerable<Worker>> GetAllWorkersAsync()
@@ -35,6 +37,12 @@ namespace ZTPAI.API.Services
 
         public async Task DeleteWorkerAsync(Guid id)
         {
+            var hours = await _hourRepository.GetAllAsync();
+            var filteredHours = hours.Where(h => h.IdWorker == id);
+            foreach (var hour in filteredHours)
+            {
+                await _hourRepository.DeleteAsync(hour.Id);
+            }
             await _workerRepository.DeleteAsync(id);
         }
     }

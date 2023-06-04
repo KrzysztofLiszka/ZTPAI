@@ -4,13 +4,17 @@
   </div>
   <div class="right-side">
     <form class="login-form" [formGroup]="form">
-      <p>Log in to access the system</p>
-      <p>Login</p>
-      <input formControlName="login">
-      <p>Password</p>
-      <input formControlName="password" type="password">
+      <p class="header">Log in to access the system</p>
+      <p class="login-header">Login</p>
+      <div>
+        <input formControlName="login">
+      </div>
+      <p class="login-header">Password</p>
+      <div>
+        <input formControlName="password" type="password">
+      </div>
       <br />
-      <button (click)="login()">SUBMIT</button>
+      <button (click)="login()" class="submit-btn">SUBMIT</button>
     </form>
   </div>
 </div>

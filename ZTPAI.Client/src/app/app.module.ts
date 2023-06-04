@@ -11,6 +11,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { SharedModule } from './modules/shared/shared.module';
 import { MaterialModule } from './modules/material/material.module';
 import { AssignmentsModule } from './modules/assignments/assignment.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,6 +22,8 @@ import { AssignmentsModule } from './modules/assignments/assignment.module';
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
         HomePageModule,
         WorkersModule,
         AssignmentsModule,

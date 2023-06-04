@@ -8,7 +8,7 @@ import { AuthService } from './services';
 })
 export class AppComponent implements OnInit {
 
-  title = 'frontend';
+  title = 'Workers managment';
 
   ngOnInit(): void {
     this.checkIfTokenExists();
