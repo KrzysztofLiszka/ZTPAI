@@ -1,5 +1,12 @@
 # ZTPAI
 
+### UŻYTE TECHNOLOGIE
+
+- .NET 6.0 WEB API C#
+- MS SQL SERVER
+- ANGULAR, TYPESCRIPT
+- ENTITY FRAMEWORK
+
 ### DIAGRAM ERD
 
 <img src="./ztpaiScreenshots/erd.png" />
@@ -18,4 +25,3 @@
 <img src="./ztpaiScreenshots/workers2.png" />
 <img src="./ztpaiScreenshots/workers3.png" />
 <img src="./ztpaiScreenshots/register1.png" />
-<img src="./ztpaiScreenshots/login1.png" />
