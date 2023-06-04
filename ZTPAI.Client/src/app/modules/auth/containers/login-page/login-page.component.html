@@ -4,17 +4,20 @@
   </div>
   <div class="right-side">
     <form class="login-form" [formGroup]="form">
-      <p class="header">Log in to access the system</p>
+      <p class="header">Zaloguj się do systemu</p>
       <p class="login-header">Login</p>
       <div>
         <input formControlName="login">
       </div>
-      <p class="login-header">Password</p>
+      <p class="login-header">Hasło</p>
       <div>
         <input formControlName="password" type="password">
       </div>
       <br />
-      <button (click)="login()" class="submit-btn">SUBMIT</button>
+      <button (click)="login()" class="submit-btn">POTWIERDŹ</button>
+      <br />
+      <br />
+      <a style="color: blue; cursor: pointer;" (click)="goToRegisterPage()">Nie masz konta? Zarejestruj się</a>
     </form>
   </div>
 </div>
