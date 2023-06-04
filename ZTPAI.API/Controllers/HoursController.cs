@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ZTPAI.API.DTOs;
 using ZTPAI.API.Models;
 using ZTPAI.API.Services.Interfaces;
 
@@ -18,7 +19,7 @@ namespace ZTPAI.API.Controllers
         }
 
         [HttpGet("GetAllHours")]
-        public async Task<IEnumerable<Hour>> GetAllHours()
+        public async Task<IEnumerable<GetAllHoursDto>> GetAllHours()
         {
             return await _hoursService.GetAllHoursAsync();
         }
@@ -37,11 +38,11 @@ namespace ZTPAI.API.Controllers
         }
 
         [HttpPost("PostHour")]
-        public async Task<ActionResult<Hour>> PostHour(Hour hour)
+        public async Task<IActionResult> PostHour(Hour hour)
         {
             await _hoursService.AddHourAsync(hour);
 
-            return Ok("Added new hour");
+            return Ok();
         }
 
         [HttpPut("PutHour")]
@@ -49,7 +50,7 @@ namespace ZTPAI.API.Controllers
         {
             await _hoursService.UpdateHourAsync(hour);
 
-            return Ok("Updated hour");
+            return Ok();
         }
 
         [HttpDelete("DeleteHour/{id}")]
@@ -57,7 +58,7 @@ namespace ZTPAI.API.Controllers
         {
             await _hoursService.DeleteHourAsync(id);
 
-            return Ok("Deleted hour");
+            return Ok();
         }
     }
 }

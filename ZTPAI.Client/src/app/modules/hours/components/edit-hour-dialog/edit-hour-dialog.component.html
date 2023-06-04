@@ -1,0 +1,28 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <h2>EDYTUJ ROZLICZENIE CZASOWE</h2>
+    <div>
+        <mat-form-field>
+            <mat-label>Zadanie</mat-label>
+            <mat-select formControlName="idTask">
+              <mat-option *ngFor="let task of tasks" [value]="task.id">{{ task.name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Pracownik</mat-label>
+            <mat-select formControlName="idWorker">
+              <mat-option *ngFor="let worker of workers" [value]="worker.id">{{ worker.name + " " + worker.surname }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Wykorzystane minuty</mat-label>
+            <input matInput type="number" formControlName="minutesTaken" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Priorytet</mat-label>
+            <input matInput type="number" formControlName="priority" />
+        </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button type="submit">EDYTUJ</button>
+    </div>
+</form>

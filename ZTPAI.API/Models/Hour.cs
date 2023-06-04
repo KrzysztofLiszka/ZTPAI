@@ -11,8 +11,6 @@ namespace ZTPAI.API.Models
         public Guid IdTask { get; set; }
         public Guid IdWorker { get; set; }
         public double MinutesTaken { get; set; }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? DateAdded { get; set; }
         public int Priority { get; set; }
     }

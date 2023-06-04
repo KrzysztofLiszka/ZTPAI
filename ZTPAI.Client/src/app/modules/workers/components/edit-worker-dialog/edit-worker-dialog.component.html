@@ -1,0 +1,17 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <h2>EDYTUJ PRACOWNIKA</h2>
+    <div>
+      <mat-form-field>
+        <mat-label>Imię</mat-label>
+        <input matInput type="text" formControlName="name" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Nazwisko</mat-label>
+        <input matInput type="text" formControlName="surname" />
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button type="submit">EDYTUJ</button>
+    </div>
+  </form>
+  

@@ -4,13 +4,13 @@
       <img src="../assets/logo-ztpai.png" [routerLink]="''">
     </div>
     <div class="right-side">
-      <button [routerLink]="'/workers'">Workers</button>
-      <button [routerLink]="'/assignments'">Zadania</button>
-      <button [routerLink]="'/hours'">Godziny</button>
-      <button [routerLink]="'/login'" (click)="logout()">Wyloguj</button>
+      <button [routerLink]="'/workers'"><mat-icon>engineering</mat-icon>Pracownicy</button>
+      <button [routerLink]="'/assignments'"><mat-icon>task_alt</mat-icon>Zadania</button>
+      <button [routerLink]="'/hours'"><mat-icon>work_history</mat-icon>Godziny</button>
+      <button [routerLink]="'/login'" (click)="logout()"><mat-icon>logout</mat-icon>Wyloguj</button>
     </div>
   </div>
 </div>
 <div class="content">
   <router-outlet></router-outlet>
-</div>
+</div> 

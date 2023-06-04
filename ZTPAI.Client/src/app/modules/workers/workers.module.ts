@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { WorkersPageComponent } from './containers';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material/material.module';
+import { AddWorkerDialogComponent, EditWorkerDialogComponent } from './components';
 
-const COMPONENTS = [WorkersPageComponent];
+const COMPONENTS = [WorkersPageComponent, AddWorkerDialogComponent, EditWorkerDialogComponent];
 
 @NgModule({
   declarations: [COMPONENTS],
