@@ -1,5 +1,5 @@
 # ZTPAI
 
-##DIAGRAM ERD
+## DIAGRAM ERD
 
 <img src="./ztpaiScreenshots/erd.png" />
