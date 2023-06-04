@@ -10,5 +10,6 @@
         public int Priority { get; set; }
         public string? TaskName { get; set; }
         public string? WorkerName { get; set; }
+        public Guid? UserId { get; set; }
     }
 }

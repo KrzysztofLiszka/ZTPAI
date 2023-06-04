@@ -12,16 +12,22 @@ namespace ZTPAI.API.Controllers
     public class HoursController : ControllerBase
     {
         private readonly IHoursService _hoursService;
+        private readonly IAuthService _authService;
 
-        public HoursController(IHoursService hoursService)
+        public HoursController(IHoursService hoursService, IAuthService authService)
         {
             _hoursService = hoursService;
+            _authService = authService;
         }
 
         [HttpGet("GetAllHours")]
         public async Task<IEnumerable<GetAllHoursDto>> GetAllHours()
         {
-            return await _hoursService.GetAllHoursAsync();
+            var userId = _authService.GetCurrentUserId();
+            var hours = await _hoursService.GetAllHoursAsync();
+
+            var filteredHours = hours.Where(h => h.UserId == userId);
+            return filteredHours;
         }
 
         [HttpGet("GetHour/{id}")]
@@ -40,6 +46,8 @@ namespace ZTPAI.API.Controllers
         [HttpPost("PostHour")]
         public async Task<IActionResult> PostHour(Hour hour)
         {
+            var userId = _authService.GetCurrentUserId();
+            hour.UserId = userId;
             await _hoursService.AddHourAsync(hour);
 
             return Ok();
@@ -48,6 +56,8 @@ namespace ZTPAI.API.Controllers
         [HttpPut("PutHour")]
         public async Task<IActionResult> PutHour(Hour hour)
         {
+            var userId = _authService.GetCurrentUserId();
+            hour.UserId = userId;
             await _hoursService.UpdateHourAsync(hour);
 
             return Ok();

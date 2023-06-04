@@ -48,7 +48,8 @@ namespace ZTPAI.API.Services
                     DateAdded = item.DateAdded,
                     Priority = item.Priority,
                     WorkerName = worker.Name + " " + worker.Surname,
-                    TaskName = assignment.Name
+                    TaskName = assignment.Name,
+                    UserId = item.UserId,
                 };
                 returnHours.Add(itemToAdd);
             }

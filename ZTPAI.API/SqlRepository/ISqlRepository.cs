@@ -1,4 +1,6 @@
-﻿namespace ZTPAI.API.SqlRepository
+﻿using ZTPAI.API.Models;
+
+namespace ZTPAI.API.SqlRepository
 {
     public interface ISqlRepository<T> where T : class
     {

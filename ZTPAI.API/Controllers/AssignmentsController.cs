@@ -11,16 +11,22 @@ namespace ZTPAI.API.Controllers
     public class AssignmentsController : ControllerBase
     {
         private readonly IAssignmentsService _assignmentsService;
+        private readonly IAuthService _authService;
 
-        public AssignmentsController(IAssignmentsService assignmentsService)
+        public AssignmentsController(IAssignmentsService assignmentsService, IAuthService authService)
         {
             _assignmentsService = assignmentsService;
+            _authService = authService;
         }
 
         [HttpGet("GetAllAssignments")]
         public async Task<IEnumerable<Assignment>> GetAllTasksToDo()
         {
-            return await _assignmentsService.GetAllTasksToDoAsync();
+            var userId = _authService.GetCurrentUserId();
+            var assignments = await _assignmentsService.GetAllTasksToDoAsync();
+
+            var filteredAssignments = assignments.Where(a => a.UserId == userId);
+            return filteredAssignments;
         }
 
         [HttpGet("GetAssignment/{id}")]
@@ -39,6 +45,8 @@ namespace ZTPAI.API.Controllers
         [HttpPost("PostAssignment")]
         public async Task<ActionResult<Assignment>> PostTaskToDo(Assignment taskToDo)
         {
+            var userId = _authService.GetCurrentUserId();
+            taskToDo.UserId = userId;
             await _assignmentsService.AddTaskToDoAsync(taskToDo);
 
             return Ok();
@@ -47,6 +55,8 @@ namespace ZTPAI.API.Controllers
         [HttpPut("PutAssignment")]
         public async Task<IActionResult> PutTaskToDo(Assignment taskToDo)
         {
+            var userId = _authService.GetCurrentUserId();
+            taskToDo.UserId = userId;
             await _assignmentsService.UpdateTaskToDoAsync(taskToDo);
 
             return Ok();

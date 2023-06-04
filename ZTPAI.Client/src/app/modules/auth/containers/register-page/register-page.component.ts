@@ -26,7 +26,7 @@ export class RegisterPageComponent {
 
   register(): void {
     this.authService.registerToTheSystem(this.form.value).subscribe(response => {
-      //this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('/login');
     })
   }
 }

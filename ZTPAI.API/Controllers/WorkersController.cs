@@ -11,16 +11,22 @@ namespace ZTPAI.API.Controllers
     public class WorkersController : ControllerBase
     {
         private readonly IWorkersService _workersService;
+        private readonly IAuthService _authService;
 
-        public WorkersController(IWorkersService workersService)
+        public WorkersController(IWorkersService workersService, IAuthService authService)
         {
             _workersService = workersService;
+            _authService = authService;
         }
 
         [HttpGet("GetAllWorkers")]
         public async Task<IEnumerable<Worker>> GetAllWorkers()
         {
-            return await _workersService.GetAllWorkersAsync();
+            var userId = _authService.GetCurrentUserId();
+            var workers = await _workersService.GetAllWorkersAsync();
+
+            var filteredWorkers = workers.Where(w => w.UserId == userId);
+            return filteredWorkers;
         }
 
         [HttpGet("GetWorker/{id}")]
@@ -39,6 +45,8 @@ namespace ZTPAI.API.Controllers
         [HttpPost("PostWorker")]
         public async Task<ActionResult<Worker>> PostWorker(Worker worker)
         {
+            var userId = _authService.GetCurrentUserId();
+            worker.UserId = userId;
             await _workersService.AddWorkerAsync(worker);
 
             return Ok();
@@ -47,6 +55,8 @@ namespace ZTPAI.API.Controllers
         [HttpPut("PutWorker")]
         public async Task<IActionResult> PutWorker(Worker worker)
         {
+            var userId = _authService.GetCurrentUserId();
+            worker.UserId = userId;
             await _workersService.UpdateWorkerAsync(worker);
 
             return Ok();
