@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
 using ZTPAI.API.DTOs;
 using ZTPAI.API.Models;
 using ZTPAI.API.Services.Interfaces;

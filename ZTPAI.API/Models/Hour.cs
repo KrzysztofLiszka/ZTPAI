@@ -13,5 +13,6 @@ namespace ZTPAI.API.Models
         public double MinutesTaken { get; set; }
         public DateTime? DateAdded { get; set; }
         public int Priority { get; set; }
+        public Guid? UserId { get ; set; }
     }
 }

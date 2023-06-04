@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using ZTPAI.API.Data;
+using ZTPAI.API.Models;
 using ZTPAI.API.Services;
 using ZTPAI.API.Services.Interfaces;
 using ZTPAI.API.SqlRepository;

@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ZTPAI.API.Data;
+using ZTPAI.API.Models;
+using ZTPAI.API.Services.Interfaces;
 
 namespace ZTPAI.API.SqlRepository
 {
